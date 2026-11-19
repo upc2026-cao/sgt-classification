@@ -30,3 +30,5 @@ Thumbs.db
 src/hw_*.py
 outputs/smoke/
 
+.dsh-*/
+
