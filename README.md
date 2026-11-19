@@ -78,6 +78,18 @@ python -m venv .venv
 .venv\Scripts\python.exe src\train.py --epochs 12   # 训练 baseline
 ```
 
+## 模型权重
+
+训练好的权重发布在 [Releases v1.0.0](https://github.com/upc2026-cao/sgt-classification/releases/tag/v1.0.0)：
+
+| 文件 | 说明 | 大小 |
+| --- | --- | --- |
+| `SGTNet-S_baseline.pt` | 主模型（0.26 M），测试准确率 99.71% | 1 MB |
+| `SGTNet-S_noiseaug.pt` | 噪声增强版，σ=10 时 99.73% | 1 MB |
+| `ResNet18.pt` | 11.17 M，测试准确率 99.77% | 43 MB |
+
+下载后放到 `outputs/<tag>/best.pt`，运行 `python src/evaluate.py --tag <tag>` 即可复现测试集指标。
+
 ## 数据集
 
 数据集由课程教师提供（10 类示功图图像，训练集 15322 张、测试集 6573 张），**未包含在本仓库中**。
