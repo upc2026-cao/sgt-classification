@@ -18,6 +18,12 @@ import content_background
 import content_end
 import content_impl
 import content_tech
+try:
+    import author
+except ModuleNotFoundError:  # 公开仓库中不包含个人信息文件
+    from types import SimpleNamespace
+    author = SimpleNamespace(STUDENT_ID="", STUDENT_NAME="", MAJOR="",
+                             DATE_TEXT="2026 年 11 月")
 import results as RS
 from data import load_cache
 from models import SGTNetS, count_params
@@ -258,18 +264,20 @@ def cover(doc):
     for _ in range(6):
         doc.add_paragraph()
 
-    for label in ("学　　号", "姓　　名", "专　　业"):
+    for label, value in (("学　　号", author.STUDENT_ID), ("姓　　名", author.STUDENT_NAME),
+                         ("专　　业", author.MAJOR)):
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_after = Pt(10)
         set_run_font(p.add_run(f"{label}："), cn="宋体", size=14)
-        r = p.add_run("＿＿＿＿＿＿＿＿＿＿")
+        r = p.add_run(f"　{value}　")
+        r.underline = True
         set_run_font(r, cn="宋体", size=14)
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(30)
-    set_run_font(p.add_run("2026 年 11 月"), cn="宋体", size=14)
+    set_run_font(p.add_run(author.DATE_TEXT), cn="宋体", size=14)
 
     doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 

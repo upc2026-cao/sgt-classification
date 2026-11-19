@@ -32,3 +32,9 @@ outputs/smoke/
 
 .dsh-*/
 
+
+# 本地个人信息，不公开
+src/author.py
+
+reports/fig/hw_*.png
+
