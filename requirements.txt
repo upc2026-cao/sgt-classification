@@ -1,0 +1,15 @@
+# 运行环境：Python 3.13 / Windows / CPU
+# 安装：pip install -r requirements.txt
+# CPU 版 PyTorch 单独装（体积小很多）：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+numpy>=2.0
+pandas>=2.2
+matplotlib>=3.8
+scikit-learn>=1.5
+scikit-image>=0.24
+opencv-python-headless>=4.10
+seaborn>=0.13
+tqdm>=4.66
+pillow>=10.0
+torch>=2.6
+torchvision>=0.21

@@ -1,0 +1,13 @@
+{
+  "name": "pixel_pca_svm",
+  "kind": "pixel",
+  "pca": 64,
+  "clf": "rbf",
+  "val_acc": 0.9991300565463245,
+  "test_acc": 0.9975657994827324,
+  "test_macro_f1": 0.9967896603721836,
+  "fit_seconds": 3.2196404933929443,
+  "predict_seconds": 2.4784743785858154,
+  "ms_per_image": 0.37706897589925686,
+  "n_features": 2304
+}

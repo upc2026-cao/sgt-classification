@@ -1,0 +1,30 @@
+{
+  "tag": "resnet18",
+  "model": "resnet18",
+  "epochs": 10,
+  "best_epoch": 9,
+  "val_f1": 1.0,
+  "test_acc": 0.9977179370150616,
+  "test_macro_f1": 0.9971911973158477,
+  "test_loss": 1.1632702388974534,
+  "params_m": 11.17537,
+  "train_minutes": 22.395394647121428,
+  "infer_ms_per_image": 2.998247742652893,
+  "test_eval_seconds": 22.029396533966064,
+  "n_train": 13023,
+  "n_val": 2299,
+  "n_test": 6573,
+  "args": {
+    "epochs": 10,
+    "batch_size": 128,
+    "lr": 0.001,
+    "model": "resnet18",
+    "tag": "resnet18",
+    "quick": false,
+    "workers": 4,
+    "no_aug": false,
+    "no_class_weights": false,
+    "no_label_smoothing": false,
+    "train_frac": 1.0
+  }
+}

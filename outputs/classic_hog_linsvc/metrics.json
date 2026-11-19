@@ -1,0 +1,13 @@
+{
+  "name": "hog_linsvc",
+  "kind": "hog",
+  "pca": null,
+  "clf": "linear",
+  "val_acc": 0.9986950848194868,
+  "test_acc": 0.9977179370150616,
+  "test_macro_f1": 0.9966804537515431,
+  "fit_seconds": 4.827672719955444,
+  "predict_seconds": 0.04862475395202637,
+  "ms_per_image": 0.007397650076377053,
+  "n_features": 1764
+}

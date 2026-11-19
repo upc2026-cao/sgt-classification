@@ -1,0 +1,12 @@
+{
+  "tag": "baseline_cnn",
+  "tta_kinds": [
+    "id",
+    "rot4",
+    "rot-4",
+    "zoom1.06",
+    "zoom0.94"
+  ],
+  "test_acc": 0.9969572493534155,
+  "test_macro_f1": 0.9946348319578918
+}

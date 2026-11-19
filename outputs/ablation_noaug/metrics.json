@@ -1,0 +1,30 @@
+{
+  "tag": "ablation_noaug",
+  "model": "sgtnet_s",
+  "epochs": 16,
+  "best_epoch": 13,
+  "val_f1": 0.9986427526890317,
+  "test_acc": 0.9961965616917694,
+  "test_macro_f1": 0.9942746607843216,
+  "test_loss": 1.1926912307131694,
+  "params_m": 0.26149,
+  "train_minutes": 9.274739948908488,
+  "infer_ms_per_image": 3.0201859772205353,
+  "test_eval_seconds": 19.372522354125977,
+  "n_train": 2607,
+  "n_val": 2299,
+  "n_test": 6573,
+  "args": {
+    "epochs": 16,
+    "batch_size": 128,
+    "lr": 0.001,
+    "model": "sgtnet_s",
+    "tag": "ablation_noaug",
+    "quick": false,
+    "workers": 4,
+    "no_aug": true,
+    "no_class_weights": false,
+    "no_label_smoothing": false,
+    "train_frac": 0.2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "hog_pca_svm",
+  "kind": "hog",
+  "pca": 128,
+  "clf": "rbf",
+  "val_acc": 0.9991300565463245,
+  "test_acc": 0.9975657994827324,
+  "test_macro_f1": 0.9953051267821127,
+  "fit_seconds": 3.1948182582855225,
+  "predict_seconds": 1.8739323616027832,
+  "ms_per_image": 0.2850954452461255,
+  "n_features": 1764
+}

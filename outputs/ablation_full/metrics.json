@@ -1,0 +1,30 @@
+{
+  "tag": "ablation_full",
+  "model": "sgtnet_s",
+  "epochs": 16,
+  "best_epoch": 12,
+  "val_f1": 0.9974073532690367,
+  "test_acc": 0.9960444241594402,
+  "test_macro_f1": 0.9941866133239514,
+  "test_loss": 1.2411170228828348,
+  "params_m": 0.26149,
+  "train_minutes": 7.180222868919373,
+  "infer_ms_per_image": 2.9730978421866894,
+  "test_eval_seconds": 19.52037215232849,
+  "n_train": 2607,
+  "n_val": 2299,
+  "n_test": 6573,
+  "args": {
+    "epochs": 16,
+    "batch_size": 128,
+    "lr": 0.001,
+    "model": "sgtnet_s",
+    "tag": "ablation_full",
+    "quick": false,
+    "workers": 4,
+    "no_aug": false,
+    "no_class_weights": false,
+    "no_label_smoothing": false,
+    "train_frac": 0.2
+  }
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 数据与缓存（数据集由课程提供，不随仓库分发）
+data/
+*.npy
+*.npz
+
+# 训练产物
+*.pt
+outputs/**/*.npz
+torchinductor_*/
+
+# 工具缓存
+.mplcache/
+.matplotlib/
+
+# 报告（含个人信息，不公开）
+reports/*.docx
+reports/*.pdf
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 平时作业（钻井方向）与早期冒烟测试，不属于本项目
+src/hw_*.py
+outputs/smoke/
+

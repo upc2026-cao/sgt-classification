@@ -1,0 +1,26 @@
+{
+  "tag": "baseline_cnn",
+  "model": "sgtnet_s",
+  "epochs": 12,
+  "best_epoch": 11,
+  "val_f1": 0.9981928219588871,
+  "test_acc": 0.9971093868857447,
+  "test_macro_f1": 0.9948739566176623,
+  "test_loss": 1.178075446284345,
+  "params_m": 0.26149,
+  "train_minutes": 15.395795051256815,
+  "infer_ms_per_image": 1.9247573800384998,
+  "test_eval_seconds": 14.318724393844604,
+  "n_train": 13023,
+  "n_val": 2299,
+  "n_test": 6573,
+  "args": {
+    "epochs": 12,
+    "batch_size": 128,
+    "lr": 0.001,
+    "model": "sgtnet_s",
+    "tag": "baseline_cnn",
+    "quick": false,
+    "workers": 6
+  }
+}

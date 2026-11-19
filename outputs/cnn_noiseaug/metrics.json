@@ -1,0 +1,31 @@
+{
+  "tag": "cnn_noiseaug",
+  "model": "sgtnet_s",
+  "epochs": 12,
+  "best_epoch": 12,
+  "val_f1": 0.9995713783640292,
+  "test_acc": 0.9971093868857447,
+  "test_macro_f1": 0.9949944247189182,
+  "test_loss": 1.1758529035994838,
+  "params_m": 0.26149,
+  "train_minutes": 22.413262283802034,
+  "infer_ms_per_image": 3.0527114868164062,
+  "test_eval_seconds": 19.371195077896118,
+  "n_train": 13023,
+  "n_val": 2299,
+  "n_test": 6573,
+  "args": {
+    "epochs": 12,
+    "batch_size": 128,
+    "lr": 0.001,
+    "model": "sgtnet_s",
+    "tag": "cnn_noiseaug",
+    "quick": false,
+    "workers": 4,
+    "no_aug": false,
+    "no_class_weights": false,
+    "no_label_smoothing": false,
+    "train_frac": 1.0,
+    "noise_aug": true
+  }
+}
