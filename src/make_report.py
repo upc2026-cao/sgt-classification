@@ -27,8 +27,8 @@ except ModuleNotFoundError:  # 公开仓库中不包含个人信息文件
 import results as RS
 from data import load_cache
 from models import SGTNetS, count_params
-from report_style import (add_page_number, body, caption, figure, heading,
-                          set_run_font, setup_document, table)
+from report_style import (add_page_number, body, caption, cover_info, figure,
+                          heading, set_run_font, setup_document, table)
 
 FIG = C.REPORT_DIR / "fig"
 TITLE = "基于深度学习的示功图工况分类方法研究"
@@ -264,19 +264,13 @@ def cover(doc):
     for _ in range(6):
         doc.add_paragraph()
 
-    for label, value in (("学　　号", author.STUDENT_ID), ("姓　　名", author.STUDENT_NAME),
-                         ("专　　业", author.MAJOR)):
-        p = doc.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_after = Pt(10)
-        set_run_font(p.add_run(f"{label}："), cn="宋体", size=14)
-        r = p.add_run(f"　{value}　")
-        r.underline = True
-        set_run_font(r, cn="宋体", size=14)
+    cover_info(doc, [("学　　号", author.STUDENT_ID),
+                     ("姓　　名", author.STUDENT_NAME),
+                     ("专　　业", author.MAJOR)])
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.space_before = Pt(30)
+    p.paragraph_format.space_before = Pt(36)
     set_run_font(p.add_run(author.DATE_TEXT), cn="宋体", size=14)
 
     doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
