@@ -5,8 +5,9 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.section import WD_SECTION
-from docx.enum.table import WD_TABLE_ALIGNMENT
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_ALIGN_VERTICAL, WD_TABLE_ALIGNMENT
+from docx.enum.text import (WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT,
+                            WD_TAB_LEADER)
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
@@ -94,6 +95,23 @@ def caption(doc, text: str, before=0, after=6):
     run = p.add_run(text)
     set_run_font(run, size=10.5)
     return p
+
+
+def cover_info(doc, rows, indent: float = 4.05, value_tab: float = 6.65,
+               font_size: float = 14):
+    """封面信息栏：标签与内容按制表位对齐，整块在页面上居中。"""
+    for label, value in rows:
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        pf = p.paragraph_format
+        pf.left_indent = Cm(indent)
+        pf.first_line_indent = Cm(0)
+        pf.space_after = Pt(10)
+        pf.line_spacing = 1.5
+        pf.tab_stops.add_tab_stop(Cm(value_tab), WD_TAB_ALIGNMENT.LEFT)
+        set_run_font(p.add_run(f"{label}："), cn="宋体", size=font_size)
+        set_run_font(p.add_run("\t" + value), cn="宋体", size=font_size)
+    return None
 
 
 def figure(doc, path: Path, cap: str, width_cm: float = 14.0):
